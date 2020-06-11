@@ -24,20 +24,23 @@ function phpinfo_getData() {
 
 function phpinfo_showInfo() {
 
-  $content = phpinfo_getData();
+  $content  = phpinfo_getData();
 
-  $DOC  = new DOMDocument();
+  $Doc      = new DOMDocument();
   
-  $DOC->loadHTML( $content );  
+  $Doc->loadHTML( $content );  
   
-  $body = $DOC->getElementsByTagName('body');
+  $body     = $Doc->getElementsByTagName('body');
   
-  if( $body && 0 < $body->length ) {
+  if(
+    $body &&
+    ( 0 < $body->length )
+  ) {
     
-    $body = $body->item(0);
+    $body   = $body->item(0);
     
     echo '<div id="PHPInfo">';
-    echo $DOC->savehtml( $body );
+    echo $Doc->savehtml( $body );
     echo '</div>';
     
   }
@@ -57,6 +60,7 @@ function phpinfo_adminMenu() {
   add_action( 'admin_print_styles-' . $page, 'phpinfo_loadBackendStyles' );
   
 }
+
 function phpinfo_adminInit() {
   
   $pluginUrl = plugin_dir_url( __FILE__ );
