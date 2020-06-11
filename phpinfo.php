@@ -5,7 +5,7 @@
   Version:      1.0.0
   Author:       Chris Doerr
   Author URI:   http://www.meomundo.com/
-  License:      GPL2
+  License:      MIT License
 */
 
 function phpinfo_getData() {
