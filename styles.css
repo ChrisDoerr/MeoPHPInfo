@@ -1,0 +1,19 @@
+
+#PHPInfo td.e {
+  text-align:       right;
+  padding-right:    1em;
+  font-weight:      bold;
+  width:            200px;
+  vertical-align:   top;
+  padding-top:      0.25em;
+  padding-bottom:   0.25em;
+}
+
+/* odd */
+#PHPInfo tr:nth-child(2n+1) {
+  background-color: transparent;
+}
+/* even */
+#PHPInfo tr:nth-child(2n) {
+  background-color: #E0E0E0;
+}
